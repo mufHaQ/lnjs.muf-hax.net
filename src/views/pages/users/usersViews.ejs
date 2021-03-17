@@ -1,0 +1,21 @@
+<%- include('../../templates/headerViews') %>
+<div class="container">
+  <h1>Users: </h1>
+  <ul>
+    <% if (users.length > 0) { %>
+    <% users.forEach(user => { %>
+     <li>
+       <a href="/users/details/<%= user.id %>" target="_blank"><%= user.username %> </a>
+     </li>
+    <% }) %>
+    <% } else { %>
+    <li>
+      <p>Data masih kosong!</p>
+    </li>
+    <% } %>
+  </ul>
+</div>
+<script>
+  console.log('ok')
+</script>
+<%- include('../../templates/footerViews') %>

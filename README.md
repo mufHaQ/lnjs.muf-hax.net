@@ -1,1 +1,1 @@
-# lnjs.muf-hax.net
+# [lnjs.muf-hax.net](https://lnjs.muf-hax.net)

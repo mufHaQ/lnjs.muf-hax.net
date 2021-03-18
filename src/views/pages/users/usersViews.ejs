@@ -1,21 +1,21 @@
 <%- include('../../templates/headerViews') %>
-<div class="container">
-  <h1>Users: </h1>
-  <ul>
-    <% if (users.length > 0) { %>
-    <% users.forEach(user => { %>
-     <li>
-       <a href="/users/details/<%= user.id %>" target="_blank"><%= user.username %> </a>
-     </li>
-    <% }) %>
-    <% } else { %>
-    <li>
-      <p>Data masih kosong!</p>
-    </li>
-    <% } %>
+<div class="container my-4 shadow py-2 rounded">
+  <h3>Users: </h3>
+  <form class="d-flex my-2">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="s">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </form>
+  <% if (users.length > 0) { %>
+  <% users.forEach(user => { %>
+  <li>
+    <a href="/users/details/<%= user.id %>" class="text-decoration-none"><%= user.username %> </a>
+  </li>
+  <% }) %>
+  <% } else { %>
+  <li>
+    <p>Data masih kosong!</p>
+  </li>
+  <% } %>
   </ul>
 </div>
-<script>
-  console.log('ok')
-</script>
 <%- include('../../templates/footerViews') %>

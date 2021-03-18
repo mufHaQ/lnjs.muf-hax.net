@@ -1,6 +1,5 @@
 <%- include('../../templates/headerViews') %>
-<div class="container">
-  <h1>Details:</h1>
+<div class="container my-4 shadow rounded py-2">
   <ul>
     <li>
       <h4>Id: <%= user.id %></h4>
@@ -12,8 +11,13 @@
       <h4>Username: <%= user.username %></h4>
     </li>
     <li>
-      <h4>Password: <%= user.password %></h4>
+      <h4>Created At: <%= user.createdAt %></h4>
+    </li>
+    <li>
+      <a href="/users/update/<%= user.id %>" class="btn btn-success">Update</a>
+      <button type="button" class="btn-delete btn btn-danger">Delete</button>
     </li>
   </ul>
 </div>
+<script src="/assets/js/lnjs.js?ver=<%= Date.now() %> "></script>
 <%- include('../../templates/footerViews') %>

@@ -1,0 +1,22 @@
+<%- include('../../templates/headerViews') %>
+<div class="container my-4 shadow rounded py-2">
+  <div class="status my-2"></div>
+  <input type="hidden" name="update-id" id="update-id" value="<%= data.id %>">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email-update" name="email-update" value="<%= data.email %>">
+  </div>
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="username" class="form-control" name="username-update" id="username-update" name="username"
+      value="<%= data.username %>">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password-update" name="password-update"
+      value="<%= data.password %>">
+  </div>
+  <button type="button" class="btn btn-primary btn-update">Update</button>
+</div>
+<script src="/assets/js/lnjs.js?ver=<%= Date.now() %> "></script>
+<%- include('../../templates/footerViews') %>
